@@ -14,7 +14,7 @@ int main() {
     double superpodercidade1,superpodercidade2;
 
     printf("Bem vindo ao Jogo Super Trunfo - Países\n");
-    printf("Voçe deverá cadastrar 2 cartas conforme oque for pedido abaixo. E depois escolher as opções de comparação\n");
+    printf("Voçe deverá cadastrar 2 cartas conforme oque for pedido abaixo de acordo com o país e cidade escolhidos. E depois escolher as opções de comparação\n");
 
 
     printf("Digite a primeira letra do Estado 1: ");
