@@ -149,15 +149,10 @@ int main() {
             printf("Carta 1 - (%s) (%d)\n ",Cidade1,NPT1);
             printf("Carta 2 - (%s) (%d) \n",Cidade1,NPT2);
             printf("Carta 1 Venceu!\n");
-        }else if(NPT1<NPT2){
+        }else{
             printf("Carta 1 - (%s) (%d)\n ",Cidade1,NPT1);
             printf("Carta 2 - (%s) (%d)\n",Cidade2,NPT2);
             printf("Carta 2 Venceu!!");
-        }else{
-            printf("Os numeros de pontos turisticos são iguais\n");
-            printf("(%s)-Numero de pontos turisticos :(%d)\n",Cidade1,NPT1);
-            printf("(%s)-Numero de pontos turisticos :(%d)\n",Cidade2,NPT2);
-        }
         break;
     case 4:
         printf("A escolha foi : Área\n");
