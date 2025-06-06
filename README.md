@@ -92,3 +92,10 @@ Ao concluir qualquer um dos níveis, você terá dado um passo importante no des
 
 Equipe de Ensino - MateCheck
 content_copy
+
+ºººººººººººººººººººººººººººººººººººººººººººººººººººººº
+notas do aluno:
+como funciona?
+Primeiro ele deverá cadastrar as cartas e seus atributos e depois deverá escolher no menu qual comparação ele quer fazer.
+ºººººººººººººººººººººººººººººººººººººººººººººººººººººº
+ 

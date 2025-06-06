@@ -13,6 +13,8 @@ int main() {
     unsigned long int Populacao1,Populacao2;
     double superpodercidade1,superpodercidade2;
 
+    printf("Bem vindo ao Jogo Super Trunfo - Países\n");
+    printf("Voçe deverá cadastrar 2 cartas conforme oque for pedido abaixo. E depois escolher as opções de comparação\n");
 
 
     printf("Digite a primeira letra do Estado 1: ");
@@ -44,7 +46,7 @@ int main() {
     printf("Digite o PIB da cidade2: ");
     scanf("%f",&PIB2);
 
-
+    // Este bloco de confição ifs serve como tratativa para caso alguns valores que não deveriam sejam 0.
     if (Area1 <= 0){
         printf("O valor da area nao pode ser menor ou igual a 0 \n");
         return 1;
@@ -61,7 +63,7 @@ int main() {
         printf("O valor da população não pode ser 0");
         return 1;
     }
-
+    // Este bloco de confição ifs serve como tratativa para caso alguns valores que não deveriam sejam 0.
 
     Densidade_populacional1 = (Populacao1)/Area1; //calcula a densidade
     PIB_per_capita1 = (PIB1)/Populacao1;
@@ -114,6 +116,7 @@ int main() {
     printf("4 - Área\n");
     printf("5 - Superpoder\n");
     printf("6 - Densidade Populacional\n");
+    printf("7 - Instruções");
 
     printf("Digite um dos valores para comparação: \n");
     scanf("%d",&opcao);
@@ -153,6 +156,7 @@ int main() {
             printf("Carta 1 - (%s) (%d)\n ",Cidade1,NPT1);
             printf("Carta 2 - (%s) (%d)\n",Cidade2,NPT2);
             printf("Carta 2 Venceu!!");
+        }
         break;
     case 4:
         printf("A escolha foi : Área\n");
