@@ -8,10 +8,11 @@
 
 int main() {
     char Estado1[100],Estado2[100],Cidade1[100],Cidade2[100];
-    int Codigo1,Codigo2,NPT1,NPT2;
+    int Codigo1,Codigo2,NPT1,NPT2,opcao;
     float Area1,Area2,PIB1,PIB2,Densidade_populacional1,Densidade_populacional2,PIB_per_capita1,PIB_per_capita2,batalha,inversodensidade,inversodensidade2;
     unsigned long int Populacao1,Populacao2;
     double superpodercidade1,superpodercidade2;
+
 
 
     printf("Digite a primeira letra do Estado 1: ");
@@ -73,8 +74,7 @@ int main() {
 
     superpodercidade1 = inversodensidade+Populacao1+Area1+PIB1+NPT1+PIB_per_capita1;
     superpodercidade2 = inversodensidade2+Populacao2+Area2+PIB2+NPT2+PIB_per_capita2;
-    //população, área, PIB, número de pontos turísticos, PIB per capita 
-    //super poder 1 :  35.628.574,00000056
+    
 
     // Aqui eu simplifiquei alguns resultados colocando menos casas decimais.
     // Para facilidar a visualização na saída. 
@@ -108,42 +108,100 @@ int main() {
   
 
     printf("\nComparação de cartas: \n");
-    
-    if (Populacao1>Populacao2){
-        printf("População: Carta 1 - (%s) Venceu!\n",Cidade1);
-    }else{
-        printf("População: Carta 2 - (%s) Venceu!\n",Cidade2);
+    printf("1 - População\n");
+    printf("2 - PIB\n");
+    printf("3 - Numero de pontos turisticos\n");
+    printf("4 - Área\n");
+    printf("5 - Superpoder\n");
+    printf("6 - Densidade Populacional\n");
+
+    printf("Digite um dos valores para comparação: \n");
+    scanf("%d",&opcao);
+
+    switch (opcao){
+    case 1:
+        printf("A escolha foi: População\n");
+        if(Populacao1>Populacao2){
+            printf("Carta 1 - (%s) (%ld)\n ",Cidade1,Populacao1);
+            printf("Carta 2 - (%s) (%ld) \n",Cidade1,Populacao2);
+            printf("Carta 1 Venceu!\n");
+        }else {
+            printf("Carta 1 - (%s) (%ld)\n ",Cidade1,Populacao1);
+            printf("Carta 2 - (%s) (%ld)\n",Cidade2,Populacao2);
+            printf("Carta 2 Venceu!!");
+        }
+        break;
+    case 2:
+        printf("A escolhe foi: PIB\n");
+        if(PIB1>PIB2){
+            printf("Carta 1 - (%s) (%.1F)\n ",Cidade1,PIB1);
+            printf("Carta 2 - (%s) (%.1f) \n",Cidade1,PIB2);
+            printf("Carta 1 Venceu!\n");
+        }else {
+            printf("Carta 1 - (%s) (%.1f)\n ",Cidade1,PIB1);
+            printf("Carta 2 - (%s) (%.1f)\n",Cidade2,PIB2);
+            printf("Carta 2 Venceu!!");
+        }
+        break;
+    case 3:
+        printf("A escolha foi: Numero de pontos turisticos\n");
+        if(NPT1>NPT2){
+            printf("Carta 1 - (%s) (%d)\n ",Cidade1,NPT1);
+            printf("Carta 2 - (%s) (%d) \n",Cidade1,NPT2);
+            printf("Carta 1 Venceu!\n");
+        }else if(NPT1<NPT2){
+            printf("Carta 1 - (%s) (%d)\n ",Cidade1,NPT1);
+            printf("Carta 2 - (%s) (%d)\n",Cidade2,NPT2);
+            printf("Carta 2 Venceu!!");
+        }else{
+            printf("Os numeros de pontos turisticos são iguais\n");
+            printf("(%s)-Numero de pontos turisticos :(%d)\n",Cidade1,NPT1);
+            printf("(%s)-Numero de pontos turisticos :(%d)\n",Cidade2,NPT2);
+        }
+        break;
+    case 4:
+        printf("A escolha foi : Área\n");
+        if(Area1>Area2){
+            printf("Carta 1 - (%s) (%.1f)\n",Cidade1,Area1);
+            printf("Carta 2 - (%s) (%.1f)\n",Cidade1,Area2);
+            printf("Carta 1 Venceu!\n");
+        }else {
+            printf("Carta 1 - (%s) (%.1f)\n ",Cidade1,Area1);
+            printf("Carta 2 - (%s) (%.1f)\n",Cidade2,Area2);
+            printf("Carta 2 Venceu!!");
+        }
+        break;
+    case 5:
+        printf("A escolha foi: Superpoder\n");
+        if(superpodercidade1>superpodercidade2){
+            printf("Carta 1 - (%s) (%.1f)\n ",Cidade1,superpodercidade1);
+            printf("Carta 2 - (%s) (%.1f)\n",Cidade1,superpodercidade2);
+            printf("Carta 1 Venceu!\n");
+        }else {
+            printf("Carta 1 - (%s) (%.1f)\n ",Cidade1,superpodercidade1);
+            printf("Carta 2 - (%s) (%.1f)\n",Cidade2,superpodercidade2);
+            printf("Carta 2 Venceu!!");
+        }
+        break;
+    case 6:
+        printf("A escolha foi: Densidade Populacional\n");
+        if(Densidade_populacional1>Densidade_populacional2){
+            printf("Carta 1 - (%s) (%.1f)\n ",Cidade1,Densidade_populacional1);
+            printf("Carta 2 - (%s) (%.1f)\n",Cidade1,Densidade_populacional2);
+            printf("Carta 1 Venceu!\n");
+        }else {
+            printf("Carta 1 - (%s) (%.1f)\n ",Cidade1,Densidade_populacional1);
+            printf("Carta 2 - (%s) (%.1f)\n",Cidade2,Densidade_populacional2);
+            printf("Carta 2 Venceu!!");
+        }
+        break;
+
+    default:
+        printf("Opção Inválida\n");
+        break;
     }
-    if (Area1>Area2){
-        printf("Area: Carta 1 - (%s) Venceu!\n",Cidade1);
-    }else{
-        printf("Area: Carta 2 - (%s) Venceu!\n",Cidade2);
-    };
-    if (PIB1>PIB2){
-        printf("PIB: Carta 1 - (%s) Venceu!\n", Cidade1);
-    }else{
-        printf("PIB: Carta 2 - (%s) Venceu!\n", Cidade2);
-    }
-    if (NPT1>NPT2){
-        printf("Numero de pontos turisticos: Carta 1 - (%s) Venceu!\n",Cidade1);
-    }else{
-        printf("Numero de pontos turisticos: Carta 2 - (%s) Venceu!\n",Cidade2);
-    }
-    if (Densidade_populacional1<Densidade_populacional2){
-        printf("Densidade Populacional: Carta 1 - (%s) Venceu!\n",Cidade1);
-    }else{
-        printf("Densidade populacional: Carta 2 -(%s) Venceu!\n",Cidade2);
-    }
-    if (PIB_per_capita1>PIB_per_capita2){
-        printf("Pib per capita: Carta 1 - (%s) Venceu\n",Cidade1);
-    }else{
-        printf("Pib per capita: Carta 2 - (%s) Venceu!\n",Cidade2);
-    }
-    if (superpodercidade1>superpodercidade2){
-        printf("Super Poder: Carta 1 - (%s) Venceu!\n",Cidade1);
-    }else{
-        printf("Super Poder: Carta 2 - (%s) Venceu!",Cidade2);
-    }
+
+
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
